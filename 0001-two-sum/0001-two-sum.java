@@ -4,14 +4,10 @@ class Solution {
         for(int i = 0; i < nums.length; i++){
             Integer complementIndex = complements.get(nums[i]);
             if(complementIndex != null){
-                return new int[]{complementIndex, i};
+                return new int[]{i, complementIndex};
             }
             complements.put(target - nums[i], i);
         }
         return nums;
     }
 }
-
-
-// rem    , indices
-// 9-2 = 7,   0
